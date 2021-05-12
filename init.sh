@@ -68,18 +68,21 @@ mv_sh() {
   mv ./prepare-commit-msg.sh ./.git/hooks/prepare-commit-msg
 }
 
+
+OS="$(uname)"
+if [[ "$OS" != "Darwin" ]] ; then
+  abort "暂时只支持macos"
+fi
+
+HOOKS_PATH=".git/hooks"
+
+if [ ! -x "$HOOKS_PATH" ]; then
+    abort "未找到"$HOOKS_PATH"目录"
+fi
+
 init_pre_post
 init_prepare_commit_msg
 mv_sh
 chmod a+x .git/hooks/*
-#
-#if [ -z "$@" ]; then
-#  SKIP_BRANCH=(ft dev test sit)
-#fi
-#
-#for SKIP in "${SKIP_BRANCH[@]}"
-#do
-#  abort "12"
-#done
-
-# chmod a+x .git/hooks/*
+echo "操作成功"
+exit 0
