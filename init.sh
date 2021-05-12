@@ -11,11 +11,11 @@ get_c() {
 }
 
 append_pre_post() {
-  echo -e "$@" >> ./pre_post.sh
+  echo -e "$@" >> ./pre-post.sh
 }
 
 append_prepare_commit_msg() {
-  echo "$@" >> ./prepare_commit_msg.sh
+  echo "$@" >> ./prepare-commit-msg.sh
 }
 
 init_pre_post() {
@@ -64,8 +64,8 @@ fi
 }
 
 mv_sh() {
-  mv ./pre_post.sh ./.git/hooks/pre_post
-  mv ./prepare_commit_msg.sh ./.git/hooks/prepare_commit_msg
+  mv ./pre-post.sh ./.git/hooks/pre-post
+  mv ./prepare-commit-msg.sh ./.git/hooks/prepare-commit-msg
 }
 
 init_pre_post
