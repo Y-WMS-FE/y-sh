@@ -3,6 +3,5 @@
 
 
 # Usage
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Y-WMS-FE/y-sh/main/init.sh)"
-`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Y-WMS-FE/y-sh/main/init.sh)"`
 
