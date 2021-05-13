@@ -10,15 +10,15 @@ get_c() {
   read -p "输入需要检验的分支名称(空格分隔)：" "$@"
 }
 
-append_pre_post() {
-  echo -e "$@" >> ./pre-post.sh
+append_pre_push() {
+  echo -e "$@" >> ./pre-push.sh
 }
 
 append_prepare_commit_msg() {
   echo "$@" >> ./prepare-commit-msg.sh
 }
 
-init_pre_post() {
+init_pre_push() {
   local s="ft dev test sit"
 #  get_c s
   append_pre_post '#! /bin/bash
@@ -64,7 +64,7 @@ fi
 }
 
 mv_sh() {
-  mv ./pre-post.sh ./.git/hooks/pre-post
+  mv ./pre-push.sh ./.git/hooks/pre-push
   mv ./prepare-commit-msg.sh ./.git/hooks/prepare-commit-msg
 }
 
