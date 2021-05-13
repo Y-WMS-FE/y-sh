@@ -21,7 +21,7 @@ append_prepare_commit_msg() {
 init_pre_push() {
   local s="ft dev test sit"
 #  get_c s
-  append_pre_post '#! /bin/bash
+  append_pre_push '#! /bin/bash
 
 if [ -z "$SKIP_BRANCH" ]; then
   SKIP_BRANCH=('$s')
@@ -80,9 +80,9 @@ if [ ! -x "$HOOKS_PATH" ]; then
     abort "未找到"$HOOKS_PATH"目录"
 fi
 
-init_pre_post
+init_pre_push
 init_prepare_commit_msg
-mv_sh
+#mv_sh
 chmod a+x .git/hooks/*
 echo "操作成功"
 exit 0
