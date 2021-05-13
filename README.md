@@ -6,7 +6,7 @@
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Y-WMS-FE/y-sh/main/init.sh)"`
 
 ## 前端应用中
-在`package.json`文件的`scripts`里增加`"preinstall": "/bin/bash -c ‘$(curl -fsSL https://raw.githubusercontent.com/Y-WMS-FE/y-sh/main/init.sh)’"`
+在`package.json`文件的`scripts`里增加`"preinstall": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Y-WMS-FE/y-sh/main/init.sh)\"",`
 
 
 这样在install依赖的时候就会注入到git的hooks
