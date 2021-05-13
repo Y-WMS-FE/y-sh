@@ -82,7 +82,7 @@ fi
 
 init_pre_push
 init_prepare_commit_msg
-#mv_sh
+mv_sh
 chmod a+x .git/hooks/*
 echo "操作成功"
 exit 0
