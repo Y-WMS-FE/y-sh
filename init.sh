@@ -28,7 +28,7 @@ if [ -z "$SKIP_BRANCH" ]; then
 fi
 for SKIP in "${SKIP_BRANCH[@]}"
 do
-  IS_SKIP=$(git symbolic-ref --short HEAD | grep -c "^$SKIP")
+  IS_SKIP=$(git symbolic-ref --short HEAD | grep -c "^$SKIP\\|$SKIP$")
   if [ $IS_SKIP -eq 1 ]; then
     exit 0
   fi
